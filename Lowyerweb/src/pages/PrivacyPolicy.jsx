@@ -1,4 +1,4 @@
-import Footer from "../components/Footer.jsx";
+
 
 function PrivacyPolicy() {
   return (
@@ -389,7 +389,7 @@ function PrivacyPolicy() {
         </article>
       </main>
 
-      <Footer />
+      
     </>
   );
 }

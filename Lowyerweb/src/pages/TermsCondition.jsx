@@ -1,4 +1,4 @@
-import Footer from "../components/Footer.jsx";
+
 
 function TermsCondition() {
   return (
@@ -412,7 +412,7 @@ function TermsCondition() {
         </article>
       </main>
 
-      <Footer />
+     
     </>
   );
 }

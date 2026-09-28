@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
   Scale,
@@ -36,6 +36,7 @@ import constitutionalLaw from "../../assets/home/OurExpertise/constitutional-law
 const expertiseData = [
   {
     title: "Criminal Law",
+    slug: "criminal-law",
     description:
       "Professional legal representation and strategic guidance in criminal matters, investigations, bail proceedings, and related court cases.",
     image: criminalLaw,
@@ -43,6 +44,7 @@ const expertiseData = [
   },
   {
     title: "Civil Law",
+    slug: "civil-law",
     description:
       "Legal assistance in civil disputes involving agreements, recovery matters, injunctions, claims, and other civil proceedings.",
     image: civilLaw,
@@ -50,6 +52,7 @@ const expertiseData = [
   },
   {
     title: "Family Law",
+    slug: "family-law",
     description:
       "Sensitive and practical legal support for family-related matters, including maintenance, custody, domestic disputes, and family settlements.",
     image: familyLaw,
@@ -57,6 +60,7 @@ const expertiseData = [
   },
   {
     title: "Property Disputes",
+    slug: "property-disputes",
     description:
       "Guidance and representation in property disputes, ownership issues, possession matters, documentation, and related litigation.",
     image: propertyDisputes,
@@ -64,6 +68,7 @@ const expertiseData = [
   },
   {
     title: "Corporate Law",
+    slug: "corporate-law",
     description:
       "Legal support for businesses and companies involving agreements, compliance, corporate matters, transactions, and commercial disputes.",
     image: corporateLaw,
@@ -71,6 +76,7 @@ const expertiseData = [
   },
   {
     title: "Cyber Crime",
+    slug: "cyber-crime",
     description:
       "Legal assistance relating to online fraud, cyber offences, digital evidence, identity theft, online harassment, and cyber complaints.",
     image: cyberCrime,
@@ -78,6 +84,7 @@ const expertiseData = [
   },
   {
     title: "Consumer Protection",
+    slug: "consumer-protection",
     description:
       "Representation and guidance in consumer disputes involving defective products, deficient services, unfair practices, and compensation claims.",
     image: consumerProtection,
@@ -85,6 +92,7 @@ const expertiseData = [
   },
   {
     title: "Divorce & Matrimonial Cases",
+    slug: "divorce-matrimonial",
     description:
       "Compassionate legal guidance for divorce, matrimonial disputes, maintenance, custody, settlement, and related family proceedings.",
     image: divorceMatrimonial,
@@ -92,6 +100,7 @@ const expertiseData = [
   },
   {
     title: "Employment / Labour Law",
+    slug: "employment-labour",
     description:
       "Legal guidance for employment disputes, workplace matters, contracts, employee rights, termination issues, and labour-related proceedings.",
     image: employmentLabour,
@@ -99,6 +108,7 @@ const expertiseData = [
   },
   {
     title: "Banking & Finance",
+    slug: "banking-finance",
     description:
       "Legal assistance in banking disputes, financial transactions, recovery matters, documentation, and other finance-related legal issues.",
     image: bankingFinance,
@@ -106,6 +116,7 @@ const expertiseData = [
   },
   {
     title: "Intellectual Property",
+    slug: "intellectual-property",
     description:
       "Protection and legal guidance concerning trademarks, copyrights, brand identity, creative works, and intellectual property disputes.",
     image: intellectualProperty,
@@ -113,6 +124,7 @@ const expertiseData = [
   },
   {
     title: "Constitutional Law",
+    slug: "constitutional-law",
     description:
       "Legal representation and guidance concerning constitutional rights, judicial remedies, public law matters, and constitutional proceedings.",
     image: constitutionalLaw,
@@ -164,6 +176,12 @@ export default function OurExpertise() {
             const Icon = item.icon;
 
             return (
+              <Link
+                key={item.slug}
+                to={`/our-expertises/${item.slug}`}
+                aria-label={`Explore ${item.title}`}
+                className="block rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a67c45]"
+              >
               <motion.article
                 key={item.title}
                 initial={{ opacity: 0, y: 50 }}
@@ -362,6 +380,7 @@ export default function OurExpertise() {
                   </div>
                 </div>
               </motion.article>
+              </Link>
             );
           })}
         </div>

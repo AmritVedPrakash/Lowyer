@@ -25,11 +25,12 @@ function FloatingContactButtons() {
       </a>
 
       {/* Call Button */}
+      {/* Call Button */}
       <a
         href={`tel:${phoneNumber}`}
         aria-label="Call us"
         title="Call us"
-        className="fixed bottom-6 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#a67c45] p-2.5 shadow-lg shadow-black/20 transition-transform duration-300 hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a67c45] animate-[floating_3s_ease-in-out_infinite]"
+        className="fixed bottom-24 left-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full bg-[#a67c45] p-2.5 shadow-lg shadow-black/20 transition-transform duration-300 hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a67c45] animate-[floating_3s_ease-in-out_infinite]"
       >
         <img
           src={callIcon}
